@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>사칙연산</title>
+    </head>
+    <body>
+        <script>
+            //console.log,alert,confirm,prompt,Number,parseInt,parseFloat
+            //alert, document.write, console.log : 출력 테스트 
+
+            // 2개의 숫자를 입력받아, 몫,나머지를 출력하시오
+            
+            var num1 = Number(prompt("첫번째 숫자"));
+            var num2 = Number(prompt("두번째 숫자"));
+
+            /* 숫자형 데이터 -정수 parseInt, parseFloat
+            원래대로라면 10/3은 3.333...이 나오지만 parseInt를 넣음으로써 정수 값만 출력하게된다 */
+            document.write(parseInt(num1/num2)+"<br/>");
+            document.write((num1%num2)+"<br/>");
+
+            /*console.log는 f12(개발자도구)에서 확인 가능. 보통 사이트에 직접 띄우지 않고 프로그램 결과를 알 수 있다*/
+
+            console.log("콘솔창에 데이터를 출력함.");
+            console.log(10+5);
+            console.log(10-5);
+            console.log(10*5);
+            console.log(10/5);
+
+            // // : 1줄 주석, /* 여러줄 주석 */
+
+            // 2개의 숫자를 입력받아, 4칙연산 결과값을 출력하시오.
+            // pro'm'pt
+            // document.write((숫자 계산)+"문자(줄바꿈이라던지 등)"), 괄호, 세미콜론 확인
+            /*
+            var num1 = Number(prompt("첫번째 숫자"));
+            var num2 = Number(prompt("두번째 숫자"));
+            document.write((num1+num2)+"<br/>");
+            document.write((num1-num2)+"<br/>");
+            document.write((num1*num2)+"<br/>");
+            document.write((num1/num2)+"<br/>");
+            */
+            //document.write(10/3+"<br/>");  // / : 나누기 연산
+            //document.write(10%3+"<br/>");  // % : 나머지 연산
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>짭팡</title>
+    <style>
+      #map{border:3px solid black; width:100%; height:350px; 
+            font-size:80px; text-align: center;}
+    </style>
+
+  </head>
+  <body>
+    <div>엘라스틴 샴푸 5000원</div>
+    <button onclick="buyBtn()">더하기</button>
+    <span id="cnt">0</span>개<div id="map">0</div>
+
+    <script>
+      var price = 5000;
+      var result=0; //금액
+      var count = 0; //개수
+      
+      //함수
+      function buyBtn(){
+
+        //alert("엘라스틴 샴푸를 장바구니에 담았습니다.");
+        result = result + 5000;
+        count = count + 1;
+
+        document.getElementById('map').innerText = result;
+        document.getElementById('cnt').innerText = count;
+      }
+
+
+
+      //getElnementById : Id가 ()인 것을 찾아라 -> 그 안에 innerText : 문자를 넣어라
+      //두 수를 입력받아 두 수를 더한 값에 *2를 해서 출력하시오 
+      /*
+      var num1 = Number(prompt("첫번째 수를 입력하시오."));
+      var num2 = Number(prompt("두번째 수를 입력하시오."));
+      var result = (num1+num2)          //*(2)
+      document.getElementById('map').innerText = result;
+      */
+    </script>
+  </body>
+</html>
