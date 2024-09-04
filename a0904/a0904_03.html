@@ -13,22 +13,24 @@
   민감하지 않은 애들은 get 방식으로 보내도 됨ex)검색어 등. 보내는 용량에 제한이 있음-->
   <form action="https://www.daum.net" name="frm" method="get">
     <label>아이디</label>
-    <input type="text" name="id" id="id"> <br/>
+    <!--readonly는 작성 막는것, 그러나 프론트단에서 막는것은 거의 쓸모가 없다(좀만 알면 뚫림)-->
+    <input type="text" name="id" id="id" value="aabbcc" readonly > <br/>
     <label>패스워드</label>
     <input type="password" name="pw"> <br/>
     <label>전화번호</label>
-    <input type="text" name="phone"> <br/>
+    <input type="text" name="phone" > <br/>
     <label>성별</label><br/>
     <input type="radio" name="gender" id="male" value="male">
     <label for="male">남자</label>
-    <input type="radio" name="gender" id="female" value="female">
-    <label for="female">여자</label>
+    <input type="radio" name="gender" id="female" value="female" checked>
+    <label for="female" >여자</label>
 <!--내가 직접 값을 입력해 집어넣는 애들은 value값을 정해주지 않아도 됨.-->
+<!--checked : 처음부터 미리 선택시켜 놓을 수 있다. input문에 작성해두면 됨-->
     <br/>
     <label>학년</label><br/>
     <input type="radio" name="grade" id="one" value="one">
     <label for="one">일학년</label>
-    <input type="radio" name="grade" id="two" value="two">
+    <input type="radio" name="grade" id="two" value="two" checked>
     <label for="two">이학년</label> 
     <input type="radio" name="grade" id="three" value="three">
     <label for="three">삼학년</label> 
@@ -38,7 +40,7 @@
     <input type="number" name="sutClass">반<br/>
 
     <label>취미</label><br/>
-    <input type="checkbox" name="hobby" value="game">
+    <input type="checkbox" name="hobby" value="game" checked>
     <label for="game">게임</label>
     <input type="checkbox" name="hobby" id="golf" value="golf">
     <label for="golf">골프</label>
@@ -48,6 +50,8 @@
     <label for="run">조깅</label>
     <input type="checkbox" name="hobby" id="book" value="book">
     <label for="book">독서</label>
+    <br/>
+    <textarea name="content" cols="50" rows="20"></textarea>
     <br/>
 
     <!--스크립트 사용 안하고 바로 전송-->

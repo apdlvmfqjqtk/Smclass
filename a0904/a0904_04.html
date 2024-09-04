@@ -22,9 +22,11 @@
     <header>
       <h1>NAVER</h1>
     </header>
+    <!--autofocus : holder 안 어디에 초점을 맞출 것이냐 의미-->
     <section>
       <form action="http://www.daum.net" method="get" name="loginFrm"> 
-        <!--autofocus : holder 안 어디에 초점을 맞출 것이냐 의미-->
+        <!--hidden은 눈에는 보이지 않지만 값은 날려준다-->
+        <input type="hidden" name="ip" value="127.0.0.1"><br/>
         <input type="text" name="id" id="id" placeholder="아이디 또는 전화번호"><br/>
         <input type="password" name="pw" id="pw" placeholder="비밀번호" autofocus ><br/>
         <div id="err"></div>
@@ -46,6 +48,9 @@
       // alert(id);
       var pw = document.getElementById("pw").value;
       // alert(pw);
+
+      //action주소로 이동하는 명령어
+      loginFrm.submit();
     }
   </script>
   
