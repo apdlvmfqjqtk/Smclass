@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--css는 외부 링크로 head단에 걸어야 한다-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style> /*CSS*/
+  *{margin: 0px; padding: 0px;}
+    h1, h2{color: red; 
+      text-align: center;
+      border: 1px solid black;}
+    img{width: 600px}
+    /* 밑의 문장처럼 태그를 연속으로 쓸 수도 있다. (id, class 연달아 사용.) */
+    p.blueText{text-align: right;}
+    .blueText{color: blue; font-size: 15px;} /*class 선택자*/
+    #main{width: 800px; height: 600px; border:1px solid black; margin: 0 auto;}
+    ul{list-style-type: square;} /*disc, circle, square, none */
+  </style>
+</head>
+<!-- h2의 부모는 body, 밑에 li의 부모는 ul. 부모 태그에 적용시키는건 
+ 밑에 자식 태그에도 적용되기에(background 제외) 들여쓰기를 잘 하라는 이유가 이것인것. -->
+<body> <!--document라고도 한다.-->
+  <div id="main">
+
+    <h2>스타일</h2>
+    <p class="blueText">문단 단락을 나누는 태그입니다.</p>
+    <div>top↑</div>
+    <img src="images/s01.jpg" alt="시드니 하버브릿지">
+    <h1>세계 3대 미항</h1>
+    <ul class="blueText">
+      <li>시드니(Sydney), 호주</li>
+      <li>리우데자네이루(Rio de Janeiro), 브라질</li>
+      <li>나폴리(Naples), 이탈리아</li>
+    </ul>
+    
+  </div>
+</body>
+</html>

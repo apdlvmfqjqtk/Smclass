@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글꼴2</title>
+  <style>
+    h3{width: 300px; height: 100px; border:1px solid black;
+      white-space: nowrap;    /* 줄단락을 없앰 */
+      overflow:hidden;        /* 테두리를 벗어난것을 숨김 */
+      text-overflow: ellipsis; /* 말줄임표 */
+      }
+      /* hover: 마우스 위에 올림  */
+      h3:hover{
+        white-space: normal;
+        overflow: visible;
+      }
+
+    div{
+      width: 300px; height: 100px; border: 1px solid black;
+      /* white-space: nowrap; */
+      overflow: scroll; /* 바깥쪽으로 넘어가는 것은 :()해라 */
+
+    }
+    h2{width: 800px; height: 200px;
+      border: 1px solid black; font-size: 50px;
+      letter-spacing: 30px; /* 자간(글자 사이 간격) 조절 */
+      word-spacing: 40px; /*단어 사이 간격 조절*/
+      text-shadow: 35px 35px 35px #f00; /* 폰트 그림자*/
+      text-decoration: line-through; /* line-through, overline, underline, none */
+      /* color: rgb(0, 0, 0, 1); 투명도 설정 가능  */
+      /* color: black; 문자생상적용 */
+      /* color: #000000; 16진수코드적용 #000 */
+      text-align: center; /* 글자 가운데 정렬 */
+      margin: 0 auto; /* 사각모델을 가운데 정렬 */
+      line-height: 190px; /* 글 세로로 가운데 정혛 */
+      /* box-sizing: border-box; padding-top: 60px; line-height대신 이렇게 맞춰도 된다. */
+    }
+    p{width: 400px; height: 500px; border: 1px solid black;
+      font-size: 17px; font-weight: 700;
+      line-height: 60px; /* 줄간격(위 아래로 30씩) */
+      text-align: justify; /*양쪽 맞춤  */
+    }
+  </style>
+</head>
+<body>
+  <h3>
+    당국자는 네타냐후 총리가 최근 팔레스타인 가자지구와 이집트 국경에 있는 필라델피 회랑에서 철수
+  </h3>
+  <div>
+    당국자는 네타냐후 총리가 최근 팔레스타인 가자지구와 이집트 국경에 있는 필라델피 회랑에서 철수하지 않을 것이라고 주장한 것은 협상에 건설적이지 않다고 말했다. 그는 "특정 문제에 대한 언급은
+  </div>
+  <H2>글꼴 관련 스타일</H2>
+  <p>당국자는 네타냐후 총리가 최근 팔레스타인 가자지구와 이집트 국경에 있는 필라델피 회랑에서 철수하지 않을 것이라고 주장한 것은 협상에 건설적이지 않다고 말했다. 그는 "특정 문제에 대한 언급은 적을수록 좋다"며 "협상 중간에 구체적인 입장을 밝히는 것이 항상 도움이 되는 것은 아니다"라고 했다.</p>
+  
+</body>
+</html>
