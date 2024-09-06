@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* solid-실선, dotted-원으로 된 점선, dashed-선으로 된 점선 */
+    div{height: 200px; 
+      /*
+      border: 10px solid black;   밑 3줄을 이거 하나로 압축가능
+      */
+      border-width: 5px; /* top, right, bottom, left 순서로 지정이 됨 (고정) 2개만 지정 시 top&bottom, right&left이다. 3개였을때는 위아래 다르고 좌우 같다 (잘 모르겠으면 4개 다 지정이 편함) */
+      border-style: solid;
+      border-color: black;
+      background: yellow; margin-bottom: 30px;
+    }
+    .c01{width: 1000px; }
+    .c02{width: 50%; border-radius: 20px;}  /* 주로 반응형 사이트에 제작 */
+    .c03{width: 200px; height: 200px; border-radius: 100px;
+      background: url(images/i01.jpg) no-repeat;
+      background-size: 100%;
+      }
+      .c03:hover{
+       background-size: 120%;
+       background-position: -10px -20px;
+       cursor: pointer; 
+       box-shadow: 5px 5px 30px 10px gray;
+      }
+  </style>
+</head>
+<body>
+  <div class="c01"></div>
+  <div class="c02"></div>
+  <div class="c03">
+    <a href="https://www.hanatour.com/promotion/plan/PM0066A90697" target="_blank"></a>
+  </div>
+  </div>
+</body>
+</html>
