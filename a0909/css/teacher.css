@@ -36,10 +36,10 @@ ol {
 }
 
 .top_menu li {
-  width: 100px;
+  width: 110px;
   height: 17px;
   text-align: center;
-  /* border-left: 1px solid white; */
+  /* border-left:1px solid white;  */
   box-sizing: border-box;
 }
 
@@ -66,11 +66,12 @@ ol {
 
 .top_menu #top_menu_5 {
   width: 130px;
+  /* border-right:1px solid black; */
 }
 
 .top_menu #top_menu_5:after {
- content: "|";
- padding-left: 10px;
+  content: "|";
+  padding-left: 10px;
 }
 
 nav {
@@ -85,13 +86,13 @@ nav {
   height: 82px;
   box-sizing: border-box;
   padding-top: 25px;
-  padding-left: 40px
+  padding-left: 40px;
 }
 
 .logo h1 {
   width: 100px;
   height: 30px;
-  /*../ : 현재 폴더를 나와서,  ./ : 현재 폴더에서, / : root폴더에서 */
+  /* ../ : 현재폴더를 나와서, ./:현재폴더에서, /: root폴더에서  */
   background: url(../images/ico_set.png) -320px -385px no-repeat;
   background-size: 800px 800px;
 }
@@ -141,6 +142,7 @@ nav {
   width: 200px;
   height: 82px;
   text-align: center;
+
 }
 
 .quick_menu ul {
@@ -164,7 +166,6 @@ nav {
   display: inline-block;
   background: url('../images/ico_set.png') -584px -320px no-repeat;
   background-size: 800px 800px;
-
 }
 
 .quick_menu div {
@@ -172,7 +173,7 @@ nav {
   height: 20px;
   position: relative;
   left: -10px;
-  top: 30px
+  top: 30px;
 }
 
 .quick_menu #quick_menu2 {
@@ -186,7 +187,7 @@ nav {
 section #banner {
   width: 100%;
   height: 640px;
-  background: url(../images/main_top.jpg) no-repeat;
+  background: url('../images/main_top.jpg') no-repeat;
   background-size: cover;
   box-sizing: border-box;
   padding: 70px 0 0 370px;
@@ -254,11 +255,10 @@ section #banner {
   width: 48px;
   height: 48px;
   display: inline-block;
-  background: url(../images/img_main_ico.png) -610px -74px no-repeat;
+  background: url('../images/img_main_ico.png') -610px -74px no-repeat;
   background-size: 800px 800px;
   position: relative;
   top: 9px;
-  left: 11px;
 }
 
 #banner_title div {
@@ -277,13 +277,12 @@ section #banner {
 #banner_title div span {
   width: 23px;
   height: 27px;
+  margin: 0 12px;
   font-size: 18px;
   font-weight: 600;
-  margin: 0 12px;
   position: relative;
   top: -5px;
 }
-
 
 #banner_title div .title_a2 {
   display: inline-block;
