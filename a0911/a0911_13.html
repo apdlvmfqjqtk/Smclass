@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 반응형 웹 사이트를 지원하고, 지금 너가 현재 쓰는 모니터네 1:1로 맞춰 줘 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>잔천테</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      width: 80%;
+      border-top: 2px solid #111;
+      margin: 30px auto;
+    }
+
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      height: 40px;
+      text-align: center;
+      border-bottom: 1px solid #111;
+    }
+    .c01 {width: 10%;}
+    .c02 {width: 45%;}
+    .c03 {width: 15%;}
+    .c04 {width: 20%;}
+    .c05 {width: 20%;}
+
+    @media screen and (max-width: 800px) {
+    .c01 {display: none;}
+    .c02 {width: 50%;}
+    .c03 {width: 20%;}
+    .c04 {width: 20%;}
+    .c05 {width: 20%;}
+    }
+
+    @media screen and (max-width: 800px) {
+      .c01 {display: none;}
+      .c02 {width: 50%;}
+      .c03 {width: 20%;}
+      .c04 {width: 20%;}
+      .c05 {width: 20%;}
+    }
+    
+
+  </style>
+</head>
+
+<body>
+  <table>
+    <colgroup>
+      <col width="10%">
+      <col width="*">
+      <col width="15%">
+      <col width="15%">
+      <col width="15%">
+    </colgroup>
+    <tr>
+      <th calss="c01">No.</th>
+      <th calss="c02">제목</th>
+      <th calss="c03">작성자</th>
+      <th calss="c04">작성일</th>
+      <th calss="c05">조회수</th>
+    </tr>
+    <td calss="c05">1</td>
+    <td calss="c05">예방관련 안내</td>
+    <td calss="c05">관리자</td>
+    <td calss="c05">2024-09-11</td>
+    <td calss="c05">100</td>
+  </table>
+</body>
+
+</html>
