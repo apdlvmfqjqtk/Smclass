@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jjk</title>
+  <style>
+    .main {
+      width: 1000px;
+      height: 100px;
+      border: 5px solid black;
+      margin: 0 auto;
+    }
+    .d01 {
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+      box-sizing: border-box;
+      background-color: yellow;
+      animation: dnjs 4s infinite alternate
+    }
+  
+
+    @keyframes dnjs {
+      from {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(500px);
+        background-color: red;
+        border-radius: 50px;
+      }
+      to {
+        transform: translateX(9000px);
+        background-color: blue;
+        border-radius: -50px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="d01"></div>
+  </div>
+</body>
+
+</html>

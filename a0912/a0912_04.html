@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunter X Hunter</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      border: 1px solid black;
+      /*
+      animation-name: chg-back;
+      animation-duration: 1s;
+      animation-timing-function: ease-in; 
+      animation-delay: 1s; /*동작지연시간*/
+      /*
+      animation-direction: alternate; /* normal(기본), alternate: 양방향 */
+      /*
+      animation-iteration-count: infinite; infinite: 무한반복 
+      */
+      /*간단하게도 요약가능*/
+      animation: chg-back 1s infinite alternate,rotate 2s infinite alternate
+    }
+    @keyframes rotate {
+
+      from{
+        transform: perspective(120px) rotateX(0deg);
+      }
+      to {
+        transform: perspective(120px) rotateX(180deg);
+      }
+    }
+
+    @keyframes chg-back {
+      from {
+        background-color: skyblue;
+        border: 2px solid black;
+      }
+
+      to {
+        background-color: blue;
+        border: 3px solid red;
+        border-radius: 50px;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+
+
+</body>
+
+</html>
