@@ -52,8 +52,14 @@ article {
 }
 
 .img {
-  width: 100%;
+  width: 410px;
   position: relative
+}
+
+.evahd {
+  width: 410px;
+  height: 355px;
+
 }
 
 .evahd .head {
