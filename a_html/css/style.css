@@ -163,7 +163,7 @@ nav {
 
 /* 배너 부분 */
 
-.banner {
+section .banner {
   width: 100%;
   height: 820px;
   background: url(../images/img_main_slide_20240612_2_pc.jpg) no-repeat;
