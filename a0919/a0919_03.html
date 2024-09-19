@@ -6,6 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>도큐먼트</title>
   <script>
+    /*
+    document.write
+    console.log
+    prompt, confirm, alert
+    */
+
+    var num = Number(prompt("첫번째 숫자를 입력하세요."));
+    var num2 = Number(prompt("두번째 숫자를 입력하세요."));
+    document.write("숫자 : " + num + "<br />");
+    document.write("타입 : " + typeof (num) + "<br />");
+    document.write("결과 : " + (num + num2) + "<br />")
+    // document.write("결과 : " + (Number(num) + Number(num2)) + "<br />") 변수에 Number값 주지 않고 이 방식으로도 출력 가능
+    /*
+    var num = 10;
+    var num2 = 20;
+    var num3 = num + num2;
+    var n = 2;
+    var num4 = num + num2 + "";
+    var b = true;
+
+    //문자가 더해지면 타입은 무조건 문자로 변환된다. *중요*
+    //type 확인: typeof(변수입력) . type 변경: Number혹은 변화시킬 타입명(변수입력)
+    document.write(num3 + n + "<br />"); //32
+    document.write(typeof (num3) + "<br />");
+    document.write(typeof (num4) + "<br />");
+    document.write(Number(num4) + n + "<br />"); //302
+    document.write(b + "<br />");
+    document.write(typeof (b) + "<br />");
+    */
+
+
+
+    /*
+    document.write(num+num2+"<br />");
+    //코드의 실행은 왼쪽에서 오른쪽. 모든 타입 중 제일 큰 타입은 문자 타입.
+    //출력 +num 에서 num이 문자열 데이터로 바뀌고 뒤에 있던 num2도 더하기가 아닌 나열로 적용되는것.
+    document.write("출력 : "+num+num2+"<br />");
+    //이 코드는 숫자 데이터가 먼저 와 더하기가 적용됐으나 뒤에 문자열이 와서 최종적으로는 30도 문자 데이터가 됨. 이 값으로는 수학적 계산을 못함
+    document.write(num+num2+": 출력<br />");
+    */
+
+
+
+    /*
     var str = "문자열";
     var str2 = "30";
     var num1 = 10;
@@ -14,7 +58,6 @@
     var c;
     var d = null;
 
-
     document.write("출력 : " + str + "<br />")
     document.write("출력 : " + str2 + "<br />")
     document.write("출력 : " + num1 + "<br />")
@@ -22,8 +65,11 @@
     document.write("출력 : " + b + "<br />")
     document.write("출력 : " + c + "<br />")
     document.write("출력 : " + d + "<br />")
-    document.write("더하기 : " + (num1 + num2) + "<br />")  //숫자 데이터만 있기에 +가 더하기 연산자로 작용
+    document.write("더하기 : " + (num1 + num2) + "<br />")  //숫자 데이터만 있기에 +가 더하기 연산자로 작용 
+    // (괄호)를 제거하면 쌍따옴포료 인해 문자 데이터로 적용돼 나열이 됨 . (): 먼저 계산해라 (사칙연산과 같음) 
     document.write("더하기 : " + (str2 + num1) + "<br />") //문자 데이터가 있기에 여기서 +는 연결 연산자로 작용
+    */
+
 
   </script>
 </head>
