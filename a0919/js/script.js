@@ -1,0 +1,1 @@
+document.write("<h2 style='color:skyblue'>외부링크에서 출력</h2><br />");

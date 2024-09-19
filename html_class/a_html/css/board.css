@@ -299,19 +299,41 @@ section td:nth-child(2) {
   font-size: 16px;
 }
 
+/* 체크박스 (checkbox) 부분 */
+
 .section .id_group .save {
   width: 150px;
   height: 26px;
   text-align: center;
 }
 
-.section .id_group .save span {
+.save input[type="checkbox"] {
+  display: none;
+}
+
+.save input[type="checkbox"]+label {
   display: inline-block;
   width: 26px;
   height: 26px;
-  margin-right: 7px;
-  background-image: url(../images/ico_set.png) 0 -40px no-repeat;
+  padding-left: 26px;
+  box-sizing: border-box;
+  background: url(../images/ico_set.png) 0 -40px no-repeat;
   background-size: 800px 800px;
+}
+
+.save input[type="checkbox"]:checked+label {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  padding-left: 26px;
+  box-sizing: border-box;
+  background: url(../images/ico_set.png) -26px -40px no-repeat;
+  background-size: 800px 800px;
+}
+
+.save span {
+  position: relative;
+  top: -7px;
 }
 
 .section .id_group .find {
@@ -329,4 +351,54 @@ section td:nth-child(2) {
   color: BLACK;
   margin-top: 16px;
   border: none;
+}
+
+/* 아이콘 (icon) 부분 */
+.login-icons {
+  width: 360px;
+  height: 53px;
+  margin: 30px auto 0;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 회원정보 안내 부분 (sign-up-info) */
+
+.sign-up-info {
+  width: 450px;
+  height: 210px;
+  margin-top: 35px;
+  box-sizing: border-box;
+  padding: 20px 15px 25px;
+  /* border: 1px solid black; */
+  text-align: left;
+  background: #f7f7f7;
+}
+
+.sign-up-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sign-up-info .sign-up {
+  width: 260px;
+  height: 50px;
+  margin-top: 15px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 600p;
+  background-color: white;
+  border: 2px solid #ccc;
+  line-height: 50px;
+}
+
+.sign-up-info .sign-up .arrow {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background: url(../images/ico_set.png) -635px 0 no-repeat;
+  background-size: 800px 800px;
+  position: relative;
+  top: 15px
 }

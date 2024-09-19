@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- style (css) 는 무조건 헤드에 넣어야 한다. -->
+  <link rel="stylesheet" type="txt/css" href="css/style.css">
+  <!-- 자바스크립트는 위치 상관없이 넣어도 인식된다. (body 안에 넣어도 가능), 여러개 삽입도 가능하다 -->
+  <script src="js/script.js"></script>
+  <script>
+    // script 내 주석 : //(한줄 주석), /* asdf */: 여러 줄 주석
+    document.write("자바스크립트 문서1<br />");
+    console.log("F12키 개발자 도구 화면 콘솔창에 출력합니다.");
+    document.write("세미콜론 (;) 이 없더라도 출력은 가능<br />");
+    document.write("명령어 에러<br />");
+  </script>
+  <title>JavaScript</title>
+</head>
+
+<body>
+  <script>
+    document.write("<h3>자바스크립트 문서2</h3>");
+    document.write('글중에 중요한 "문장"입니다.<br />');
+    // 역슬래쉬를 넣으면 다음 글자는 문자취급
+    document.write("글중에 중요한 \"문장\"입니다.<br />");
+  </script>
+</body>
+
+</html>
