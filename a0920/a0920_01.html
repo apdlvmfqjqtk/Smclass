@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>산술 연산자</title>
+</head>
+
+<body>
+  <script>
+    
+    var a = 10;
+    var b = 20;
+    var c = 30;
+    var d = 40;
+
+    //논리 연산자의 OR, AND는 하나만 부합해도 결과가 정해지기에 앞의 코드가 많다면 뒤를 읽지 않고 값을 도출해낸다
+    var result = a>b && c>a;  
+    document.write(result+ "<br />")
+    var result2 = d>c || a>d;  
+    document.write(result2+ "<br />")
+    
+    var result3 = !(a>b); //!(false) => true
+    document.write(result3 + "<ba />");
+
+
+    /*
+    var a = 10;
+    var b = 20;
+    var c = 10;
+    var f = "20";
+    var result = a>c; //false
+    document.write(result+"<br />");
+    var result2 = a < b ;
+    document.write(result2+"<br />");
+    var result3 = b == f; 
+    document.write(result3+"<br />");
+    var result4 = b === f; 
+    document.write(result4+"<br />");
+    var result5 = a != c;    // !: not연산자. 부정형
+    document.write(result5+"<br />");
+    */
+    
+    /*
+    for (var i = 0; i < 10; i++) {
+      document.write(i + "<br />")
+    }
+    */
+
+    /*
+    var num = 1;
+    num++; //num = num+1
+    document.write(num + "<br />");
+
+    var num2 = 0;
+    // num2= ++num;
+    // num2= num++;
+
+    ++num;
+    num2 = num;
+    document.write("num2: "+num2);
+    */
+
+    /*
+    document.write("200"-100)
+    var num = 10;
+    var num2 = 5;
+    num += num2;
+    // => num = num + num2;
+    document.write(num); //15출력
+    */
+
+    /*
+    var num = Number(prompt("숫자를 입력하세요"));
+    var num2 = Number(prompt("숫자를 입력하세요"));
+
+    var result = num + num2;
+    var result2 = num - num2;
+    var result3 = num * num2;
+    var result4 = num / num2;
+    var result5 = num % num2;
+
+    document.write("더하기 : " + result + "<br />");
+    document.write("빼기 : " + result2 + "<br />");
+    document.write("곱하기 : " + result3 + "<br />");
+
+    document.write("나누기 : " + result4 + "<br />");
+    // parseInt(): 괄호 안 내용을 정수형으로 변환시켜라 (소수점 절삭)
+    document.write("몫 : " + parseInt(result4) + "<br />"); //int(정수형): parseInt, float(실수형) parseFloat
+    document.write("다시 실수형으로 변환: " + parseFloat(result4) +"<br />") //result4를 딱히 변경한건 아니라 굳이 추가 안해도 실수형으로 나오긴 함
+    document.write("나머지 : " + result5 + "<br />");
+    */
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연산자</title>
+  <script>
+    function nbtn(event) {
+      var num = document.getElementById("num").value;
+
+      // (num >=0 && num<=9)
+
+      if ((num >= 0 && num <= 9) || ((num >= 'a' && num <= 'z') || (num >= 'A' && num <= 'z'))) {
+        alert("영문자 또는 숫자입니다.")
+      } else {
+        alert("영문자 또는 숫자가 아닙니다. 다시 입력하세요")
+        document.getElementById("num").value = ""; //칸 자동 지움
+        document.getElementById("num").focus(); //그 칸으로 커서 자동이동
+      }
+    }
+
+
+  </script>
+</head>
+
+<body>
+
+  <form>
+    <label>숫자</label>
+    <input type="text" name="num" id="num">
+    <br />
+    <input type="button" onclick="nbtn(event)" value="확인">
+
+  </form>
+
+
+
+</body>
+
+</html>

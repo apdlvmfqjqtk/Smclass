@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today_Lotto</title>
+</head>
+
+<body>
+  <script>
+//인간버전
+
+    // var a = parseInt(Math.random() * 45) + 1;
+    // var b = parseInt(Math.random() * 45) + 1;
+    // var c = parseInt(Math.random() * 45) + 1;
+    // var d = parseInt(Math.random() * 45) + 1;
+    // var e = parseInt(Math.random() * 45) + 1;
+    // var f = parseInt(Math.random() * 45) + 1;
+    // var g = parseInt(Math.random() * 45) + 1;
+
+    // document.write("오늘의 번호 : "+a+"&nbsp"+b+"&nbsp"+c+"&nbsp"+d+"&nbsp"+e+"&nbsp"+f+"&nbsp"+"<br />"+"보너스 번호 : "+g);
+
+//gpt 버전
+    function generateLottoNumbers() {
+      const numbers = new Set();
+
+      while (numbers.size < 7) {
+        const randomNumber = Math.floor(Math.random() * 45) + 1; // 1~45 사이의 숫자
+        numbers.add(randomNumber);
+      }
+
+      return Array.from(numbers).sort((a, b) => a - b); // 배열로 변환하고 정렬
+    }
+
+    const lottoNumbers = generateLottoNumbers();
+    document.write(lottoNumbers);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <script>
+    /*
+    // 월을 입력받아 (12)
+    // 12 1 2 겨울 3 4 5 봄 6 7 8 여름 9 10 11 가을
+    var mon = Number(prompt("월을 입력하세요"));
+    var result = "";
+    if (mon >= 3 && mon <=5) {
+      result = "봄";
+    } else if (mon >= 6 && mon <= 8) {
+      result = "여름";
+    } else if (mon>= 9 && mon <=11) {
+      result = "가을";
+    } else {
+      result = "겨울";
+    }
+    document.write(result+"<br />")
+    */
+
+    function loginBtn() {
+      // alert("로그인 버튼")
+      var id = document.getElementById("id").value;
+      var pw = document.getElementById("pw").value;
+      // console.log(id,pw);
+
+      if((id == 'aaa') && (pw == '1111')) {
+        alert("로그인이 되었습니다.");
+        location.href="http://www.daum.net"
+      } else {
+        alert("아이디 또는 패스워드가 일치하지 않습니다.");
+        document.getElementById("id").focus();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form action="#" name="frm" method="get">
+    <label>아이디</label>
+    <input type="text" name="id" id="id"><br />
+    <label>비밀번호</label>
+    <input type="password" name="pw" id="pw"><br />
+    <input type="button" onclick="loginBtn()" value="로그인">
+  </form>
+</body>
+
+</html>
