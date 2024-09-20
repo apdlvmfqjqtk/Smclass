@@ -1,1 +1,1 @@
-document.write("<h2 style='color:skyblue'>외부링크에서 출력</h2><br />");
+document.write("<h2 style='color:red;'>외부링크에서 문서출력</h2><br>");
