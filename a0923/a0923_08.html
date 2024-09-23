@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+</head>
+
+<body>
+  <script>
+    var tday = new Date;
+    var year = tday.getFullYear();
+    var month = tday.getMonth();
+    var tmonth = (month + 1);
+    if (tmonth < 10) {
+      tmonth = "0" + tmonth
+    }
+    var date = tday.getDate();
+    var tdate = date;
+    if (tdate < 10) {
+      tdate = "0" + tdate
+    }
+    var day = tday.getDay();
+    // if (tday == 0) tday = 일;
+    // else if (tday == 1) tday = 월;
+    // else if (tday == 2) tday = 화;
+    // else if (tday == 3) tday = 수;
+    // else if (tday == 4) tday = 목;
+    // else if (tday == 5) tday = 금;
+
+
+
+
+
+    document.write(year + "-" + tmonth + "-" + tdate + "-" + day)
+
+    document.write("<hr>")
+
+    //5자리 숫자 입력받아 합
+    //charAt 사용.
+    var number = prompt("7자리 수") //숫자는 charAt 없기에 문자열로 입력받음
+    var total = 0;
+    for (var i = 0; i <number.length; i++) {
+      total += Number(number.charAt(i));
+    }
+    document.write("합 : " + total + "<br />");
+
+    // var n = Number(number.charAt(0));
+    // var n2 = Number(number.charAt(1));
+    // var n3 = Number(number.charAt(2));
+    // var n4 = Number(number.charAt(3));
+    // var n5 = Number(number.charAt(4));
+    // var total = n + n2 + n3 + n4 + n5
+    // document.write("합 : " + total + "<br />");
+
+
+  </script>
+</body>
+
+</html>

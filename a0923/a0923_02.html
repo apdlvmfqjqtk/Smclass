@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열선언</title>
+</head>
+
+<body>
+  <script>
+    //변수선언 - 개별적으로 출력
+    var a = 10;
+    var b = 20;
+    var c = 30;
+    var d = 40;
+    var e = 50;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+
+    //배열선언 - 반복문을 사용해 출력
+    var arr = new Array(5); //arr라는 방에 공간 닫히는데 내가 박음
+    for (var i = 0; i < 5; i++) {
+      arr[i] = i * 10 + 10
+      console.log(arr[i])
+    }
+
+    //배열선언 2 얠 더많이씀
+    //배열 : []대괄호사용, 방 이름이 있다[0],[1], [2]
+    //0번째부서 시작하니 방 번호 헷갈리지 않기
+    var cArr = [10, 20, 30, 40, 50]
+    for (var i = 0; i < 5; i++) {
+      console.log(cArr[i])
+    }
+
+  </script>
+</body>
+
+</html>
