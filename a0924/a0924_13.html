@@ -13,8 +13,12 @@
     $(function () {
       $("#d01").text("안녕하세요.");
       $("#d01").html("<h1>안녕하세요.</h1>");
+      $("#d01").css("background", "yellow");  //제이커리 구문
+      // document.querySelector("#d01").style.backgroundcolor = "yellow"  js 구문
       $(".c01").text("<h1>반가워요.</h1>");
-      $("#img").attr("src", "images/i2.jpg")
+      $("#img").attr("src", "images/i2.jpg");
+      // document.querySelector("#img").setAttribute("src", "images/i2.jpg"); js 구문
+
     });
     // document.querySelector("#d01").innerText = "안녕하세요.";
     // document.querySelector(".c01").innerText = "반가워요";
@@ -31,6 +35,7 @@
       height: 400px;
       overflow: hidden;
     }
+
     img {
       width: 100%;
     }
@@ -41,7 +46,7 @@
   <div id="d01">00</div>
   <div class="c01">00</div>
   <div id="wrap">
-    <img  id="img" src="images/i1.jpg">
+    <img id="img" src="images/i1.jpg">
   </div>
 </body>
 
