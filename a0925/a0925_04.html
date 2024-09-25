@@ -4,11 +4,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>anime(심화)</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>ajax</title>
+  <script>
+    //제이쿼리 선언
+    $(function () {
+
+      // var board = [{
+      //   "no": 1,
+      //   "title": "Assistant Media Planner",
+      //   "date": "2024-01-09",
+      //   "name": "Viole Vennart",
+      //   "hit": 83
+      // }, {
+      //   "no": 2,
+      //   "title": "Paralegal",
+      //   "date": "2024-09-10",
+      //   "name": "Crosby Geater",
+      //   "hit": 47
+      // }
+      // ];
+
+      //버튼 클릭 이벤트
+      $("#dataBtn").click(function () {
+        $.ajax({
+          url: "js/boardData.json",
+          typeof: "get", //get, post
+          data: "", // 데이버를 서버로 전송
+          dataType: "json",  //text, html, json xml 가장 많이씀 
+          success: function (data) { //서버송신 성공시
+            console.log(data);
+
+            //data:배열 -> no
+            var no_data = "";
+            // 배열로 된 데이터이기에 for문을 이용해 [i번째] 넘버. 제목. 날짜,, 가져오는것
+            for (var i = 0; i < data.length; i++) {
+              // no_data += "" + data[i].no + "," + data[i].title + "," + data[i].date + "," + data[i].name + "," + data[i].hit
+
+                //표에 넣는 방법
+                // <tr>
+                // <td>1</td>
+                // <td>이벤트 안내</td>
+                // <td>2024-09-25</td>
+                // <td>관리자</td>
+                // <td>1</td>
+                // </tr >
+
+                //tbody안에 표 입력
+                $("#tbody")
+               no_data += `<tr id=${data[i].no}>`
+               no_data += `<td>${data[i].no}</td>`
+               no_data += `<td>${data[i].title}</td>`
+               no_data += `<td>${data[i].date}</td>`
+               no_data += `<td>${data[i].name}</td>`
+               no_data += `<td>${data[i].hit}</td>`
+               no_data += `<td><button class='delBtn'>삭제</button></td>`
+               no_data += '<tr>'
+                
+            };
+            //삭제 버튼 클릭
+         
+            // 삭제 버튼 클릭
+
+            //div안에 글자 입력이벤트
+            $("#tbody").html(no_data); // html코드가 text로 출력되질 않도록 html로 입력하도록 설정해주기
+
+
+          },
+          error: function () {    //서버송신 에러시
+            console.log('실패')
+            alert('실패')
+          }
+
+        }); //ajax
+
+      }); //dataBtn
+
+      // console.log(board.no);
+      // console.log(board.title);
+      // console.log(board.date);
+      // console.log(board.name);
+      // console.log(board.hit);
+
+    }); //제이쿼리 
+
+  </script>
+
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    th,
+    td {
+      width: 200px;
+      height: 40px;
+      text-align: center;
+    }
+
+    th:nth-child(2) {
+      width: 500px;
+    }
+
+    div {
+      width: 600px;
+      margin: 30px auto;
+      border: 1px solid black;
+    }
+  </style>
 </head>
 
 <body>
+  <h1>게시판</h1>
+  <button id="dataBtn"> 데이터 가져오기</button>
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>날짜</th>
+        <th>작성자</th>
+        <th>조회수</th>
+        <th>삭제</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
 
+    </tbody>
+  </table>
+  <!-- <div></div> -->
 </body>
 
 </html>
