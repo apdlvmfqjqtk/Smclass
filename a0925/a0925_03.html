@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>real Anime</title>
+  <script>
+    // 애니메의 선순서는 제이커리(짧으니깐) 안돼면 자바스크립트 사용 /
+    $(function () {
+      $(".c01").animate({marginLeft: "200"}, 2000);
+      $(".c02").animate({borderRadius: "50%",height: "200px", width: "200px"}, 2000);
+    });
+  </script>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+    }
+    
+
+    .c01 {
+      background-color: aqua;
+    }
+
+    .c02 {
+      background-color: pink;
+    }
+
+    .c03 {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="c01"></div>
+  <div class="c02"></div>
+  <div class="c03"></div>
+</body>
+
+</html>

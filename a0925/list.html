@@ -19,6 +19,20 @@
         alert("번호클릭");
       })
 
+      $(".menu").mouseover(function () {
+        $(".navibg").stop();
+        $(".navibg").slideDown(100, "linear")
+      });
+
+      $(".menu").mouseout(function () {
+        $(".navibg").stop();
+        $(".navibg").slideUp(100, "linear")
+      });
+
+
+
+
+
     });
   </script>
 </head>
@@ -48,7 +62,7 @@
             document.querySelector(".navibg").style.display = 'none';
           }
         </script>
-        <div class="menu" onmouseover="m_over()" onmouseleave="m_leave()">
+        <div class="menu">
           <ul>
             <li><a href="#">포레스트</a></li>
             <li><a href="#">스파&찜질방</a></li>
@@ -83,6 +97,7 @@
         <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <script>
+        var count = 1;
         function writeBtn() {
           alert("저장클릭");
           //날짜, 조회수 - 1;
@@ -90,37 +105,35 @@
           var tday = today.getFullYear() + "-" + ('0' + (today.getMonth() + 1)) + "-" + today.getDate();
           var hit = 1;
 
-          console.log(document.getElementById("no").value);
           console.log(document.getElementById("title").value);
           console.log(document.getElementById("name").value);
           console.log(tday);
           console.log(hit);
           console.log(data);
 
+          var hdata = "";
+          hdata += `<tr id=${count}>`;
+          hdata += `<td>${count}</td>`;
+          hdata += "<td><a href='#'>" + document.getElementById("title").value + "</a></td>";
+          hdata += "<td>" + document.getElementById("name").value + "</td>";
+          hdata += "<td>" + tday + "</td>";
+          hdata += "<td><button class=delBtn>삭제</button></td>";
+          hdata += "</tr>";
 
-          data += "<tr>";
-          data += "<td>" + document.getElementById("no").value + "</td>";
-          data += "<td><a href='#'>" + document.getElementById("title").value + "</a></td>";
-          data += "<td>" + document.getElementById("name").value + "</td>";
-          data += "<td>" + tday + "</td>";
-          data += "<td>" + hit + "</td>";
-          data += "</tr>";
-
-
-          // document.getElementById("tbody").innerHTML = "";
-          document.getElementById("tbody").innerHTML = data;
+          $("#tbody").prepend(hdata); //html태그에서 위에 추가
+          // $("#tbody").append(hdata); //html태그에서 아래에 추가
+          //$("#tbody").html(hdata); // 안에 있는 html태그를 모두 지운후, 추가
 
           // 입력폼의 글자 삭제
-          document.getElementById("no").value = "";
           document.getElementById("title").value = "";
           document.getElementById("name").value = "";
 
+          count++;
+          console.log("count : " + count)
 
         }
       </script>
       <div class="frmInput">
-        <label>번호</label>
-        <input type="text" name="no" id="no"><br />
         <label>제목</label>
         <input type="text" name="title" id="title"><br />
         <label>작성자</label>
@@ -151,17 +164,35 @@
       <script>
         var data = "";
         for (var i = 1; i <= 10; i++) {
+          count++;
           // data += "<tr id='" + i + "'>"; `키를 이용해 이 구문을 밑줄처럼 쓰는 것도 가능하다.
           data += `<tr id='${i}'>`;
           data += "<td class='num'>" + i + "</td>";
           data += "<td><a href='#'>예방관련 안내</a></td>";
           data += "<td>관리자</td>";
           data += "<td>2024-09-10</td>";
-          data += "<td>100</td>";
+          data += "<td><button class=delBtn>삭제</button></td>";
           data += "</tr>";
-
         }
         document.getElementById("tbody").innerHTML = data;
+
+        //동적 이벤트
+        $(function () { // document를 다시 한번 읽고 나서 실행시켜줘
+          $(document).on("click", ".delBtn", function () {
+            var dellist = $(this).closest("tr");
+            $(dellist).remove();
+          });
+
+          //삭제버튼 - 정적 이벤트 (새로 추가된 애들은 삭제를 못시켜줌 ) - 맨 처음 읽은거에서 실행기켜줘
+          // $(".delBtn").click(function () {
+          //   // alert("test");
+          //   var dellist = $(this).closest("tr");
+          //   // console.log($(this).closest("tr"));
+          //   $(dellist).remove();
+          // });
+
+
+        });
       </script>
     </table>
     <ul class="page-num">

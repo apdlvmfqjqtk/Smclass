@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>Anime</title>
+  <script>
+    //제이쿼리 구문
+    $(function () {
+
+      //슬라이드 닫힘
+      $(".btn2").click(function () {
+        $(".box").stop();
+        $(".box").slideUp(1000, "linear", function () {
+
+        }
+        );
+      });
+
+      //슬라이드 열림
+      $(".btn1").click(function () {
+        $(".box").stop();
+        $(".box").slideDown(1000, "linear", function () {
+          
+        }
+      );
+    });
+    
+    //페이드 In
+    $(".btn3").on("click", function () {
+        $(".box").fadeOut(500, "swing", function () {
+
+        });
+      });
+
+    //toggle 효과
+    $(".btn4").on("click", function () {
+        $(".box").stop();
+        $(".box").slideToggle(500, "linear");
+      });
+
+
+
+    }); //제이쿼리 구문
+  </script>
+  <style>
+    .content {
+      width: 400px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn1">슬라이드열림</button>
+  <button class="btn2">슬라이드닫힘</button>
+  <button class="btn3">페이드 In</button>
+  <button class="btn4">toggle</button>
+  <div class="box">
+    <div class="content">
+      요즘 배추가 아니라 '금추'라는 말이 나올 정도로, 배춧값이 크게 뛰어올랐는데요.
+
+      귀해진 배추 때문에 다투다 사람이 숨졌습니다.
+
+      70대 여성 A 씨는 지난 24일 오전, 경기도 이천시에 있는 지인 B 씨의 농장에서 B 씨를 밀어 넘어뜨려 숨지게 한 혐의를 받고 있습니다.
+
+      당시 A 씨는 B 씨가 자신의 텃밭에서 배추 10포기를 가져갔다고 생각해 다툼을 벌였고, 이 과정에서 B 씨가 경찰에 신고하려 하자 B 씨를 밀쳤는데요.
+
+      이 과정에서 흙바닥으로 넘어지며 의식을 잃은 B 씨는 심정지 상태로 병원에 옮겨졌으나 결국 숨졌습니다.
+
+      경찰은 현장에서 A 씨를 체포했고 정확한 사인 확인을 위해 B 씨의 시신을 부검 의뢰하는 한편 자세한 범행 경위를 조사하고 있습니다.
+    </div>
+
+  </div>
+</body>
+
+</html>
