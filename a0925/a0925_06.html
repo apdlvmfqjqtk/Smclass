@@ -8,6 +8,9 @@
   <title>성적</title>
   <script>
     $(function () { //제이쿼리 선언
+      let count = 1;
+      let total = 0;
+      // let count = 1;
       $("#dataBtn").click(function () { //데이터 불러오기 버튼 클릭 시작
         alert("데이터 불러오기 시작")
         //데이터를 가져오기 위한 Ajax 선언 시작
@@ -23,22 +26,22 @@
             console.log(data[0].no + " , " + data[0].name + " , " + data[0].korea + " , " + data[0].eng + " , " + data[0].math); //추가로 확인
 
             var g_data = "";
-
-            for (var i = 0; i < data.length; i++) {  //배열 데이터를 자동으로 집어넣기 위한 for문
+            // i < data.length가 맞으나 멈칫거리는 문제로 100투입
+            for (var i = 0; i < 100; i++) {  //배열 데이터를 자동으로 집어넣기 위한 for문
 
               var total = data[i].korea + data[i].eng + data[i].math;
               console.log(total);
-              var divid = parseInt(total / 3);
+              var avg = parseInt(total / 3);
 
-              g_data += `<tr>`
+              g_data += `<tr id='${data[i]}'>`
               g_data += `<td>${data[i].no}</td>`
               g_data += `<td>${data[i].name}</td>`
               g_data += `<td>${data[i].korea}</td>`
               g_data += `<td>${data[i].eng}</td>`
               g_data += `<td>${data[i].math}</td>`
               g_data += `<td>${total}</td>`
-              g_data += `<td>${divid}</td>`
-              g_data += `<td><button class="delBtn">삭제</button></td>`
+              g_data += `<td>${avg}</td>`
+              g_data += `<td><button class="updBtn">수정</button><button class="delBtn">삭제</button></td>`
               g_data += `</tr>`
             }; //for문 끝
             $("#tbody").html(g_data);
@@ -50,14 +53,70 @@
         }); //에이잭 선언 끝
       }); //데이터 불러오기 버튼 클릭 끝
 
-      $(document).on("click", ".delBtn", function () { //삭제 버튼 클릭 시작
+
+      //입력 버튼 이벤트 시작
+      $(document).on("click", "#create", () => {
+        alert("입력");
+        //번호 : count
+        //이름, 국어, 영어, 수학, 평균
+        //var는 위에 중복 선언이 되어도 에러가 안나는데 let에러를 띄워줘서 실수를 방지한다.
+        let name = $("#name").val(); //value약자
+        let korea = Number($("#korea").val());
+        let eng = Number($("#eng").val()); 
+        let math = Number($("#math").val()); 
+        total = korea + eng + math
+        avg = (total / 3).toFixed(2)
+        console.log(name, korea, eng, math, total, avg)
+        //표를 만들어서 추가시켜줌
+
+        let s_data = "";
+        s_data += `<tr id='${count}'>`
+        s_data += `<td>${count}}</td>`
+        s_data += `<td>${name}</td>`
+        s_data += `<td>${korea}</td>`
+        s_data += `<td>${eng}</td>`
+        s_data += `<td>${math}</td>`
+        s_data += `<td>${total}</td>`
+        s_data += `<td>${avg}</td>`
+        s_data += `<td><button class="updBtn">수정</button>
+                <button class="delBtn">삭제</button></td>`
+        g_data += `</tr>`
+
+        $("#tbody").prepend(s_data);
+
+        //데이터 지우기
+        $("#name").val("");
+        $("#korea").val("");
+        $("#eng").val(""); 
+        $("#math").val(""); 
+
+        count++;
+      })
+
+
+
+
+
+
+
+
+
+
+
+
+
+      //수정 버튼 이벤트
+
+
+      //수정완료 이벤트
+
+
+      //삭제 버튼 클릭 시작
+      $(document).on("click", ".delBtn", function () {
         var delist = $(this).closest("tr");
         console.log(delist)
         $(delist).remove();
       }); //삭제 버튼 클릭 끝
-
-
-
 
 
     }); //제이쿼리 선언 끝
@@ -111,6 +170,7 @@
     <input type="text" name="eng" id="eng"><br />
     <label>수학</label>
     <input type="text" name="math" id="math"><br />
+    <button id="create">입력</button>
   </form>
   <table>
     <thead>
@@ -126,7 +186,6 @@
       </tr>
     </thead>
     <tbody id="tbody">
-
     </tbody>
   </table>
 </body>

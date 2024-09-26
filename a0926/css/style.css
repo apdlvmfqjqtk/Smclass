@@ -156,7 +156,7 @@ text-overflow: ellipsis; white-space: nowrap; overflow:hidden;
 }
 .mem_wrap .left_set .center a{ display: inline-block; width:270px; height:65px;
   background: #0b1915; font-size: 17px; font-weight: 600; letter-spacing: -0.05em; 
-  line-height: 67px; box-sizing: border-box; padding-left:45px; float:right;
+  line-height: 67px; box-sizing: border-box; padding-left:45px;  /*float:right;*/
 }
 .mem_wrap .left_set .center a span{display: inline-block; width:22px; height:22px;
 background: url(../images/ico_re_plus_white.png)  no-repeat;
