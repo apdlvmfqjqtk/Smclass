@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>JS마지막날</title>
+  <script>
+    //제이쿼리 선언
+    $(function () {
+
+      //버튼 클릭 시, 데이터가 입력되었는지 확인하고 아니라면 입력하라는 알림창 출력
+      $(document).on("click", "#membership", function () {
+        // alert("확인 시작");
+
+        //정규표현식
+
+
+
+        /*
+        //3자리 모두 영문자확인
+        let count = 0;
+        let eng = $("#eng").val(); //3자리
+        for (let i = 0; i < eng.length; i++) {
+          if (!(eng[i] >= 'a' && eng[i] >= 'z')) {
+            count++;
+          }
+        }
+        if (count > 0) {
+          alert("영문자아님")
+        }
+        */
+
+        /*
+        //문자 키코드
+        if ($("#eng").val() >= 'aaa' && $("#eng").val() <= 'zzz') {
+          alert("영문자")
+        } else {
+          alert("영문자아님")
+        }
+        */
+
+        // 숫자이면서4자리이산입력해야함아니면에러표시함
+        //숫자인지 체크  - JS문법
+        // if (isNaN($("#number").val()) || $("#number").val().length < 4) {
+        //   alert("숫자만입력해주시고4자리이상입력해주세요")
+        // } 
+        // else if ($("#number").val().length < 4) {
+        //   alert("4자리이상입력해주세요")
+        // }
+
+        /*
+        //숫자인지 체크 - $는 jquery 문법
+        if(!$.isNumeric($("#number").val())) {
+          alert("숫자만 입력이 가능합니다");
+        } else {
+          alert("숫자 맞습니다");
+        }
+          */
+
+        /*
+        //빈공백 체크
+        let name = $("#name").val();
+        if ($("#id").val().length < 1) {
+          alert("아이디를 입력을");
+          return false;
+          //3자리이상
+        } else if ($("#id").val().length < 3) {
+          alert("아이디는 최소 3자리 이상");
+          return false;
+        }
+          */
+
+      }); //버튼 클릭 이벤트 끝
+
+
+
+    }); //제이쿼리
+  </script>
+</head>
+
+<body>
+  <h1>회원가입</h1>
+  <form action="#" name="frm" method="post">
+
+    <label>아이디</label>
+    <input type="text" name="id" id="id"> <br />
+    
+    <label>번호</label>
+    <input type="text" name="number" id="number"> <br />
+    <label>영문자3개입력</label>
+    <input type="text" name="eng" id="eng"> <br />
+
+
+    <button type="button" id="membership">확인</button>
+  </form>
+</body>
+
+</html>

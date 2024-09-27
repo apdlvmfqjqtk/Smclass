@@ -392,3 +392,8 @@ section td:nth-child(2) {
   position: relative;
   top: 16px;
 }
+
+/* 사진 크기 조절 */
+img {
+  width: 100px;
+}
