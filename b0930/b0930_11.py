@@ -11,7 +11,7 @@ print(money.split(" "))
 money_data = money.split(" ")
 print(money_data)
 
-for md in money_data :
+# for md in money_data :
   
 
 # str1 = input("문자를 입력하세요 : ")
