@@ -66,10 +66,10 @@ while True:
                     s[2] = int(input("변경 국어 점수 입력 : "))
                 elif choice == "2":
                     print("현재 영어점수 :", s[3])
-                    s[2] = int(input("변경 영어 점수 입력 : "))
+                    s[3] = int(input("변경 영어 점수 입력 : "))
                 elif choice == "3":
                     print("현재 수학점수 :", s[4])
-                    s[2] = int(input("변경 수학 점수 입력 : "))
+                    s[4] = int(input("변경 수학 점수 입력 : "))
                 elif choice == "0":
                     print("성적 수정을 취소합니다.")
                     print()
