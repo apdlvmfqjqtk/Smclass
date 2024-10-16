@@ -1,19 +1,36 @@
-# students 리스트 타입
-students = [
-  {"no":1,"name":"홍길동","kor":100,"eng":100,"math":99,"total":299,"avg":99.67,"rank":0},
-  {"no":2,"name":"유관순","kor":80,"eng":80,"math":85,"total":245,"avg":81.67,"rank":0},
-  {"no":3,"name":"이순신","kor":90,"eng":90,"math":91,"total":271,"avg":90.33,"rank":0},
-  {"no":4,"name":"강감찬","kor":60,"eng":65,"math":67,"total":192,"avg":64.00,"rank":0},
-  {"no":5,"name":"김구","kor":100,"eng":100,"math":84,"total":284,"avg":94.67,"rank":0},
-]
-stuNo = len(students)  # 리스트에 학생이 있으면, 그 인원으로 변경
-choice = 0 # 전역변수
+students = []
+s_key = ["no","name","kor","eng","math","total","avg","rank"]
 
+# 학생 파일에서 학생들 자료 불러오기 
+f = open('students.txt','w',encoding='UTF-8')
+while True:
+  line = f.readline()
+  if not line:
+    break
+  m = line.split(",")
+  # for i in range:
+  #   if i == 1: continue
+  #   elif i == 6: m[i] = float(m[i])
+  #   else: m[i] = int(m[i])
+  m[0] = int(m[0])
+  m[0] = int(m[2])
+  m[0] = int(m[3])
+  m[0] = int(m[4])
+  m[0] = int(m[5])
+  m[0] = float(m[6])
+  m[0] = int(m[7])
+  students.append(dict(zip(s_key,m)))
+# print(students)
+f.close()
+# ----------------------------------------------
 
 s_title = ['번호','이름','국어','영어','수학','합계','평균','등수'] #전역변수
+stuNo = len(students)  # 리스트에 학생이 있으면, 그 인원으로 변경
+choice = 0 # 전역변수
 chk = 0    # 체크변수
 count = 1  # 성적처리
 no=0;name="";kor=0;eng=0;math=0;total=0;avg=0;rank=0 #성적처리변수
+
 
 # 메뉴출력함수 선언
 def title_program():
@@ -55,6 +72,14 @@ def stu_input(stuNo):
       stuNo += 1  # 학생수 1증가
       print(f"{name} 학생성적이 저장되었습니다.!")
       print()
+
+      f = open('stu_input','w',encoding='UTF-8')
+      f.write(ss)
+      # csv파일 형태
+      data = f"{ss['no']}, {ss['name']},{ss['kor']},{ss['eng']},{ss['math']},{ss['total']},{ss['avg']:.2f},{ss['rank']}\n"
+      f = open('stu_input.txt','w',encoding='utf-8')
+      f.write(data)
+      f.close()
   return stuNo
 # --------------------
 
