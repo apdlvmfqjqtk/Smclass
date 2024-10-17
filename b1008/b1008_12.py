@@ -14,4 +14,3 @@ print(type(now_date))
 now_datetime = today.strftime("%Y-%m-%d %H:%M:%S")
 print(now_datetime)
 print(type(now_datetime))
-

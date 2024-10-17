@@ -1,0 +1,5 @@
+{
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "workbench.colorTheme": "Monokai"
+}
