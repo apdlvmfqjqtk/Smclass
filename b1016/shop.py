@@ -15,6 +15,7 @@ while True:
 
 # cart.txt에서 파일 읽기를 해 와서 member안에 dict로 저장시키기
 c_keys = ['cno','id','name','pCode','pName','price','date']
+cart = []
 f = open('cart.txt','r',encoding='utf-8')
 while True:
   line = f.readline()

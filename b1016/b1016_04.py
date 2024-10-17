@@ -12,7 +12,7 @@ f = open('member.txt','w',encoding='utf-8')
 for m in member:
   f.write(f"{m['id']},{m['pw']},{m['name']},{m['nicName']},{m['money']},{m['address']}\n")
 
-f.close
+f.close()
 
 
 
