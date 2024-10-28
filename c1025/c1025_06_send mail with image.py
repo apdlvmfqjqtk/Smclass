@@ -1,15 +1,3 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-import time
-import requests
-from bs4 import BeautifulSoup
-import random
-import csv
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.options import Options
-import pyautogui
 # 이메일 발송 관련
 import smtplib
 from email.mime.text import MIMEText
@@ -42,7 +30,7 @@ with open("c1025/newses.csv",'rb') as f:
 
 s = smtplib.SMTP(smtpName,smtpPort)
 s.starttls() #  보안인증
-s.login(sendEmail,pw)
+s.login(sendEmail,pw) 
 s.sendmail(sendEmail,recvEmail,msg.as_string())
 print("msg : ")
 print(msg.as_string())
