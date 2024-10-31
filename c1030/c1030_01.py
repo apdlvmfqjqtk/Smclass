@@ -12,9 +12,9 @@ smtpName = "smtp.naver.com"
 smtpPort = 587
 
 # 자신의 네이버메일주소,id, pw, 받는사람이메일주소
-sendEmail = "@naver.com"
-pw = ""
-recvEmail = "@gmail.com"
+sendEmail = "tjdwkwnsla1@naver.com"
+pw = "JDULNSW8QJM2"
+recvEmail = "zmgkgzmgkg4@gmail.com"
 
 def connects():
   user="ora_user"
