@@ -392,12 +392,55 @@ select * from emp02;
 
 commit;
 
---drop table board2;
---
---drop table emp01;
---drop table emp3;
---drop table emp44;
---drop table stu;
---drop table chartable;
---drop table chartable2;
---drop table datetable;
+
+create table mem (
+id varchar2(30) primary key,
+pw varchar2(30) not null,
+name varchar2(30) default '무명',
+age number(3) default 0,
+birth date,
+gender  varchar2(6) check(gender in ('Male','Female')),
+hobby varchar2(50) default 'game',
+mdate date default sysdate
+);
+
+insert into mem values (
+'aaa','1111','홍길동','24','2000/05/05','Male','golf',sysdate
+);
+
+insert into mem values (
+'ccc','1111','이순신','23','2001/07/25','Male','game',sysdate
+);
+
+commit;
+
+select * from mem;
+
+-- employees 테이블 50번의 rotn dlfma 아이ㄷ
+select count(*) as person,department_id from employees
+where department_id = 50
+group by department_id;
+
+
+-- 부서별 부서번호에 맞는 부서 명
+select a.department_id, department_name
+from employees a, departments b
+where a.department_id = b.department_id
+;
+
+-- employees 테이블의 부서번호,부서이름
+select count(*) no, a.department_id dept, department_name deptname
+from employees a, departments b
+where a.department_id = b.department_id and a.department_id = 50
+group by a.department_id,department_name
+;
+
+desc mem;
+select * from mem;
+rollback;
+insert into mem(id,pw,name,age,birth,gender,hobby) values('ddd','1111','강감찬',22, '20220312','Male','game');
+
+select * from students;
+desc students;
+rollback;
+insert into students values(stu_seq.nextval,'김유신',99,98,96,(99+98+96),(99+98+96)/3,0,sysdate);
