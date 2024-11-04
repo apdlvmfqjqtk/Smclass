@@ -792,3 +792,7 @@ where employee_id = 124;
 select a.employee_id,a.emp_name,a.manager_id,b.emp_name 
 from employees a, employees b
 where a.manager_id = b.employee_id and a.manager_id = 124;
+
+select * from students;
+desc students;
+
