@@ -9,6 +9,7 @@ def connects():
   except Exception as e: print("예외처리 : ", e)
   return conn
 
+
 while True:
   print("[ 학생성적 프로그램 ]")
   print("1. 학생성적 입력")
