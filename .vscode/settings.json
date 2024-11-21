@@ -1,5 +1,11 @@
 {
   "editor.tabSize": 2,
   "editor.defaultFormatter": "ms-python.black-formatter",
-  "workbench.colorTheme": "Monokai"
+  "workbench.colorTheme": "Monokai",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "junstyle.vscode-django-support"
+  }
 }
