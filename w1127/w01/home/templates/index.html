@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈 화면</title>
+  <script>
+    // 로그아웃 변수가 있는지 확인. 로그아웃 상태라면 로그아웃 메시지 전송
+    if("{{lgot}}" == "1"){
+      alert("로그아웃 완료")
+    }
+  </script>
+</head>
+<body>
+  <h2>메인페이지</h2>
+  {% if not request.session.session_id %}  <!-- request로 넘어온 세션 아이디가 없다면-->
+  <ul>
+    <li><a href="/member/login/">로그인</a></li>
+  </ul>
+  <hr>
+  {% else %}  <!-- 없는게 아니라면(있다면) -->
+  <ul>
+    <li><a href="/member/logout/">로그아웃</a></li>
+    <li><a href="/board/list/">게시판리스트</a></li>
+    <li><a href="admin/">admin 관리자</a></li>
+  </ul>
+  <hr>
+  {% endif %}
+</body>
+</html>

@@ -9,7 +9,7 @@ class Board(models.Model):
   bcontent = models.TextField()
   # 계층형 게시판
   bgroup = models.IntegerField(null=True)
-  bstep = models.IntegerField(default=0)
+  bstep = models.IntegerField(default=0)  
   bindent = models.IntegerField(default=0)
   bhit = models.IntegerField(default=0)
   bdate = models.DateTimeField(auto_now=True)
