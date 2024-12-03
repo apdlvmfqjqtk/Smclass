@@ -14,3 +14,4 @@ class Member(models.Model):
   # mdate = models.DateTimeField(default=datetime.now())
   def __str__(self):
     return f"{self.id},{self.name},{self.mdate}"
+  
