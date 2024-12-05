@@ -41,11 +41,22 @@ def form(request):
 
 ## 상세보기
 def bview(request,bno):
-  qs = Board.objects.filter(bno=bno)
+  id = request.session['session_id']
+  member = Member.objects.get(id=id)
+  qs = Board.objects.filter(bno=bno) 
+
+    # 저장 board.bno, board.member.id
+  if qs[0].like_members.filter(pk=id).exists(): # 좋아요클릭을 했으면
+    result = "1" 
+  else:
+    result = "0" 
+  count = qs[0].like_members.count()
+
+  
   # 하단댓글가져오기
   c_qs = Comment.objects.filter(board=qs[0]).order_by("-cno")
   print("확인 : ",c_qs,c_qs.count)
-  context = {"board":qs[0],"clist":c_qs}
+  context = {"board":qs[0],"clist":c_qs, "result":result, "count":count}
   return render(request,'bview.html',context)
 
 
